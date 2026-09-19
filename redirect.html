@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#0a0a1a">
+    <meta name="description" content="MPAN Network telah pindah ke domain baru: mpannetwork.fun">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="refresh" content="0; url=https://mpannetwork.fun">
+    <link rel="canonical" href="https://mpannetwork.fun">
+    
+    <title>Redirecting... | MPAN Network</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #0a0a1a 100%);
+            background-size: 200% 200%;
+            animation: bgShift 15s ease infinite;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        @keyframes bgShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Particle background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #8B5CF6;
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: floatUp linear infinite;
+            box-shadow: 0 0 10px #8B5CF6;
+        }
+
+        @keyframes floatUp {
+            from {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.6;
+            }
+            to {
+                transform: translateY(-10vh) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* Glow orbs */
+        .glow-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: #8B5CF6;
+            top: -200px;
+            left: -200px;
+            animation: float1 20s ease-in-out infinite;
+        }
+
+        .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: #EC4899;
+            bottom: -150px;
+            right: -150px;
+            animation: float2 25s ease-in-out infinite;
+        }
+
+        @keyframes float1 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(100px, 100px); }
+        }
+
+        @keyframes float2 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-100px, -100px); }
+        }
+
+        .container {
+            max-width: 520px;
+            width: 100%;
+            position: relative;
+            z-index: 10;
+            background: rgba(10, 10, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 24px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 100px rgba(139, 92, 246, 0.1);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #8B5CF6, #EC4899, #8B5CF6);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(139, 92, 246, 0.15);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 20px;
+            font-size: 0.7rem;
+            color: #a78bfa;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .spinner-wrap {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 20px auto 24px;
+        }
+
+        .spinner {
+            width: 80px;
+            height: 80px;
+            border: 4px solid rgba(139, 92, 246, 0.15);
+            border-top-color: #8B5CF6;
+            border-right-color: #EC4899;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .spinner-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #8B5CF6;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 0.6; transform: translate(-50%, -50%) scale(0.9); }
+        }
+
+        .title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .subtitle {
+            color: #a0a0b0;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .domain-link {
+            display: inline-block;
+            color: #8B5CF6;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 12px;
+            margin: 16px 0;
+            transition: all 0.3s ease;
+            word-break: break-all;
+        }
+
+        .domain-link:hover,
+        .domain-link:active {
+            color: #fff;
+            background: rgba(139, 92, 246, 0.25);
+            border-color: #8B5CF6;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: rgba(139, 92, 246, 0.15);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #8B5CF6, #EC4899);
+            width: 0%;
+            border-radius: 4px;
+            animation: progress 2s ease-in-out infinite;
+        }
+
+        @keyframes progress {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+
+        .note {
+            margin-top: 24px;
+            padding: 14px 18px;
+            background: rgba(139, 92, 246, 0.08);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 12px;
+            font-size: 0.82rem;
+            color: #a0a0b0;
+            line-height: 1.5;
+        }
+
+        .note strong {
+            color: #a78bfa;
+        }
+
+        .manual-btn {
+            display: none;
+            margin-top: 16px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #8B5CF6, #EC4899);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .manual-btn:hover,
+        .manual-btn:active {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+        }
+
+        .manual-btn.show {
+            display: inline-block;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                padding: 32px 20px;
+                border-radius: 20px;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+                letter-spacing: 1.5px;
+            }
+
+            .title {
+                font-size: 1.2rem;
+            }
+
+            .subtitle {
+                font-size: 0.88rem;
+            }
+
+            .domain-link {
+                font-size: 0.95rem;
+                padding: 9px 16px;
+            }
+
+            .spinner-wrap,
+            .spinner {
+                width: 64px;
+                height: 64px;
+            }
+
+            .spinner-inner {
+                font-size: 1.2rem;
+            }
+
+            .note {
+                font-size: 0.78rem;
+                padding: 12px 14px;
+            }
+
+            .glow-orb {
+                filter: blur(60px);
+            }
+
+            .orb-1 {
+                width: 250px;
+                height: 250px;
+            }
+
+            .orb-2 {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .title {
+                font-size: 1.05rem;
+            }
+
+            .container {
+                padding: 24px 16px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background effects -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
+        <div class="logo">MPAN NETWORK</div>
+        <div class="badge">DOMAIN BARU</div>
+
+        <div class="spinner-wrap">
+            <div class="spinner"></div>
+            <div class="spinner-inner">→</div>
+        </div>
+
+        <div class="title">Kami Telah Pindah</div>
+        <div class="subtitle">
+            Domain lama <strong style="color: #EC4899;">mpannetwork.my.id</strong> telah dipindahkan ke domain baru.
+        </div>
+
+        <a href="https://mpannetwork.fun" class="domain-link" id="mainLink">
+             mpannetwork.fun
+        </a>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+        <div class="subtitle" style="font-size: 0.85rem;">
+            Mengalihkan otomatis dalam <strong id="countdown" style="color: #8B5CF6;">3</strong> detik...
+        </div>
+
+        <a href="https://mpannetwork.fun" class="manual-btn" id="manualBtn">
+            Klik 
+        </a>
+
+        <div class="note">
+            <strong>Catatan:</strong> 
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+
+          
+            const NEW_DOMAIN = 'https://mpannetwork.fun';
+            const OLD_DOMAINS = ['mpannetwork.my.id', 'www.mpannetwork.my.id'];
+            const REDIRECT_DELAY = 0; 
+            const SHOW_MANUAL_AFTER = 3000; 
+
+    
+            function buildTargetUrl() {
+                const path = window.location.pathname || '/';
+                const search = window.location.search || '';
+                const hash = window.location.hash || '';
+                return NEW_DOMAIN + path + search + hash;
+            }
+
+            
+            function doRedirect() {
+                const target = buildTargetUrl();
+                try {
+                    window.location.replace(target);
+                } catch (e) {
+                    
+                    window.location.href = target;
+                }
+            }
+
+
+            function isAlreadyOnNewDomain() {
+                return window.location.hostname === 'mpannetwork.fun' ||
+                       window.location.hostname === 'www.mpannetwork.fun';
+            }
+
+            if (isAlreadyOnNewDomain()) {
+                console.log('Already on new domain');
+                return;
+            }
+
+         
+            const mainLink = document.getElementById('mainLink');
+            const manualBtn = document.getElementById('manualBtn');
+            const targetUrl = buildTargetUrl();
+
+            if (mainLink) mainLink.href = targetUrl;
+            if (manualBtn) manualBtn.href = targetUrl;
+
+    
+            const countdownEl = document.getElementById('countdown');
+            let countdown = 3;
+
+            const countdownInterval = setInterval(() => {
+                countdown--;
+                if (countdownEl) countdownEl.textContent = countdown;
+                if (countdown <= 0) {
+                    clearInterval(countdownInterval);
+                }
+            }, 1000);
+
+        
+            setTimeout(() => {
+                if (manualBtn) {
+                    manualBtn.classList.add('show');
+                }
+            }, SHOW_MANUAL_AFTER);
+
+      
+            if (REDIRECT_DELAY === 0) {
+                doRedirect();
+            } else {
+                setTimeout(doRedirect, REDIRECT_DELAY);
+            }
+
+ 
+            function createParticles() {
+                const container = document.getElementById('particles');
+                if (!container) return;
+
+                const particleCount = window.innerWidth < 480 ? 20 : 40;
+
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+
+                    const size = Math.random() * 3 + 1;
+                    const left = Math.random() * 100;
+                    const duration = Math.random() * 10 + 8;
+                    const delay = Math.random() * 5;
+
+                    particle.style.width = size + 'px';
+                    particle.style.height = size + 'px';
+                    particle.style.left = left + '%';
+                    particle.style.animationDuration = duration + 's';
+                    particle.style.animationDelay = delay + 's';
+
+                    const colors = ['#8B5CF6', '#EC4899', '#a78bfa', '#f472b6'];
+                    particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    particle.style.boxShadow = `0 0 10px ${particle.style.background}`;
+
+                    container.appendChild(particle);
+                }
+            }
+
+            createParticles();
+
+           
+            window.addEventListener('error', (e) => {
+                console.warn('[MPAN] Error:', e.message);
+                if (!isAlreadyOnNewDomain()) {
+                    doRedirect();
+                }
+            });
+
+          
+       
+            window.addEventListener('beforeunload', () => {
+              
+            });
+
+        })();
+    </script>
+</body>
+</html>
